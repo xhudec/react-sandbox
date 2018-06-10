@@ -3,6 +3,8 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
+import Card from '../../components/Card';
+
 import * as Styled from './styledComponents';
 
 const LandingPage = () => (
@@ -20,34 +22,29 @@ const LandingPage = () => (
       <Grid container style={{ flexGrow: 1 }}>
         <Grid item xs={12}>
           <Grid container spacing={24}>
-            <Grid item xs={4}>
-              <Styled.Paper style={{ height: 100 }}>
-                <Styled.Typography variant="subheading">React</Styled.Typography>
-              </Styled.Paper>
+            <Grid item xs={12} md={6} lg={4}>
+              <Card title="React" body="todo" />
             </Grid>
-            <Grid item xs={4}>
-              <Styled.Paper style={{ height: 100 }}>
-                <Styled.Typography variant="subheading">create-react-app</Styled.Typography>
-              </Styled.Paper>
+            <Grid item xs={12} md={6} lg={4}>
+              <Card title="create-react-app" body="todo" />
             </Grid>
-            <Grid item xs={4}>
-              <Styled.Paper style={{ height: 100 }}>
-                <Styled.Typography variant="subheading">react-router-dom</Styled.Typography>
-              </Styled.Paper>
+            <Grid item xs={12} md={6} lg={4}>
+              <Card title="react-router-dom" body="todo" />
             </Grid>
-            <Grid item xs={4}>
-              <Styled.Paper style={{ height: 100 }}>
-                <Styled.Typography variant="subheading">
-                  <span role="img" aria-label="emoji">
-                    💅
-                  </span>styled-components
-                </Styled.Typography>
-              </Styled.Paper>
+            <Grid item xs={12} md={6} lg={4}>
+              <Card title="styled-components" body="todo" />
             </Grid>
-            <Grid item xs={4}>
-              <Styled.Paper style={{ height: 100 }}>
-                <Styled.Typography variant="subheading">Material UI</Styled.Typography>
-              </Styled.Paper>
+            <Grid item xs={12} md={6} lg={4}>
+              <Card title="Material UI" body="todo" />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <Card title="Prettier" body="todo" />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <Card title="Flow" body="todo" />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <Card title="ESLint" body="todo" />
             </Grid>
           </Grid>
         </Grid>
