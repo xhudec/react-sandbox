@@ -6,7 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-type Props = {};
+type Props = {
+  openSideBar: Function,
+};
 
 type State = {};
 
@@ -16,13 +18,15 @@ class Header extends Component<Props, State> {
   state = {};
 
   render() {
+    const { openSideBar } = this.props;
+
     return (
       <AppBar>
         <Toolbar>
-          <IconButton>
+          <IconButton onClick={openSideBar} color="inherit">
             <MenuIcon />
           </IconButton>
-          <Typography variant="title">React Sandbox</Typography>
+          <Typography variant="title" color="inherit">React Sandbox</Typography>
         </Toolbar>
       </AppBar>
     );
