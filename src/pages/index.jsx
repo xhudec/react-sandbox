@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from '../components/Header';
 import SideBar from '../components/SideBar';
 import LandingPage from './LandingPage';
+import NotFoundPage from './NotFound';
 
 import * as Styled from './styledComponents';
 
@@ -31,7 +32,8 @@ class Root extends Component<Props, State> {
         <SideBar isOpen={sidebarIsOpen} onClose={this.closeSideBar} />
         <Styled.Body>
           <Switch>
-            <Route path="/" component={LandingPage} />
+            <Route exact path="/" component={LandingPage} />
+            <Route component={NotFoundPage} />
           </Switch>
         </Styled.Body>
       </Styled.Layout>
