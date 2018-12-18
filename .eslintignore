@@ -1,6 +1,0 @@
-node_modules/*
-build/*
-flow-typed/*
-
-__tests__
-stories
