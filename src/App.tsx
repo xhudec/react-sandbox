@@ -1,30 +1,19 @@
 import * as React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
 
-import logoSvg from './logo.svg'
+import Pages from './pages'
 
-import './App.css'
+import theme from 'theme/index'
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logoSvg} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    )
-  }
-}
+interface AppProps {}
+
+const App: React.StatelessComponent<AppProps> = () => (
+  <BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <Pages />
+    </ThemeProvider>
+  </BrowserRouter>
+)
 
 export default App

@@ -1,7 +1,0 @@
-{
-  "typescript.validate.enable": true,
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "flow.enabled": false,
-  "editor.wordBasedSuggestions": true,
-  "javascript.nameSuggestions": true,
-}

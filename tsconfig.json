@@ -1,19 +1,12 @@
 {
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "public"
-  ],
+  "extends": "./tsconfig.paths.json",
+  "include": ["src"],
+  "exclude": ["node_modules", "public"],
   "compilerOptions": {
     "jsx": "preserve",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "dom",
-      "es2015"
-    ],
+    "lib": ["dom", "es2015"],
     "experimentalDecorators": true,
     "target": "es5",
     "allowJs": true,
