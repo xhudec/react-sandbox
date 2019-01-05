@@ -8,7 +8,7 @@ import theme from 'theme/index'
 
 interface AppProps {}
 
-const App: React.StatelessComponent<AppProps> = () => (
+const App: React.FunctionComponent<AppProps> = () => (
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <Pages />

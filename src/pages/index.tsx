@@ -1,30 +1,16 @@
 import * as React from 'react'
-import { Switch, Route, RouteProps } from 'react-router-dom'
+import { Switch, Route, Redirect, RouteProps } from 'react-router-dom'
 
-import HomePage from './home'
-
-const routing: RouteProps[] = [
-  {
-    path: '/',
-    component: HomePage,
-  },
-  {
-    path: '/todo',
-    render: () => <div>Todo List</div>,
-  },
-  {
-    path: '/not-found',
-    render: () => <div>404: Not Found</div>,
-  },
-]
+import routingConfiguration from './routingConfiguration'
 
 interface PagesProps {}
 
 const Pages: React.FunctionComponent<PagesProps> = () => (
   <Switch>
-    {routing.map(route => (
+    {routingConfiguration.map(route => (
       <Route {...route} />
     ))}
+    <Redirect to="/not-found" />
   </Switch>
 )
 

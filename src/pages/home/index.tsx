@@ -5,9 +5,10 @@ import { PrimaryButton } from 'components/styled/buttons'
 
 interface HomePageProps extends RouteComponentProps {}
 
-const HomePage: React.FunctionComponent<HomePageProps> = () => (
+const HomePage: React.FunctionComponent<HomePageProps> = ({ children }) => (
   <div>
     <PrimaryButton onClick={() => console.log('Yaaaay')}>Primary Button</PrimaryButton>
+    {children}
   </div>
 )
 

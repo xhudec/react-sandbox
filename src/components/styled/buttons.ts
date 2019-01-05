@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 interface ButtonProps {
-  onClick: Function
+  onClick?: Function
 }
 
 export const PrimaryButton = styled('button')<ButtonProps>`
