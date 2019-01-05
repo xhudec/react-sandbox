@@ -4,8 +4,8 @@ export interface ThemeInterface {
 }
 
 const theme: ThemeInterface = {
-  primary: 'radioactive', // TODO
-  secondary: '#000000', // TODO
+  primary: '#76ff03',
+  secondary: '#000000',
 }
 
 export default theme

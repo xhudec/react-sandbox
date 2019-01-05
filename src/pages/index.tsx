@@ -8,7 +8,7 @@ interface PagesProps {}
 const Pages: React.FunctionComponent<PagesProps> = () => (
   <Switch>
     {routingConfiguration.map(route => (
-      <Route {...route} />
+      <Route key={String(route.path)} {...route} />
     ))}
     <Redirect to="/not-found" />
   </Switch>
