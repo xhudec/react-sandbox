@@ -5,24 +5,27 @@
   "dependencies": {
     "dotenv": "^6.2.0",
     "lodash": "^4.17.11",
-    "react": "16.7.0-alpha.2",
-    "react-dom": "16.7.0-alpha.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
+    "react-scripts": "^2.1.3",
     "styled-components": "^4.1.3",
-    "tslib": "^1.9.3"
+    "tslib": "^1.9.3",
+    "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "lint": "tslint --config tslint.json --project tsconfig.json 'src/**/*.ts{,x}'",
+    "lint": "tslint --config tslint.yaml --project tsconfig.json 'src/**/*.ts{,x}'",
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|json|css|less|graphql)\"",
     "prettier:format": "npm run prettier -- --write",
     "prettier:validate": "npm run prettier -- --list-different",
     "test": "is-ci \"test:coverage\" \"test:watch\"",
     "test:watch": "react-scripts test --watch",
-    "test:coverage": "react-scripts test --coverage"
+    "test:coverage": "react-scripts test --coverage",
+    "test:static": "npm audit && npm run prettier:validate && npm run lint",
+    "dependencies:upgrade": "npm-check --update"
   },
   "browserslist": [
     ">0.2%",
@@ -31,22 +34,24 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/jest": "^23.3.10",
-    "@types/lodash": "^4.14.119",
-    "@types/node": "^10.12.18",
-    "@types/react": "^16.7.17",
-    "@types/react-dom": "^16.0.11",
+    "@types/jest": "^24.0.0",
+    "@types/lodash": "^4.14.120",
+    "@types/node": "^10.12.21",
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.8.0",
     "@types/react-router-dom": "^4.3.1",
-    "@types/styled-components": "^4.1.4",
+    "@types/styled-components": "^4.1.8",
+    "@types/uuid": "^3.4.4",
     "husky": "^1.3.1",
     "is-ci-cli": "^1.1.1",
-    "jest-dom": "^3.0.0",
-    "lint-staged": "^8.1.0",
-    "react-testing-library": "^5.4.4",
-    "tslint": "^5.12.0",
+    "jest-dom": "^3.0.2",
+    "lint-staged": "^8.1.3",
+    "npm-check": "^5.9.0",
+    "react-testing-library": "^5.5.3",
+    "tslint": "^5.12.1",
     "tslint-config-airbnb": "^5.11.1",
-    "tslint-config-prettier": "^1.17.0",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^3.2.2"
+    "typescript": "^3.3.1"
   }
 }

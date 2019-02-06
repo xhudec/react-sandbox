@@ -3,9 +3,7 @@ import { Switch, Route, Redirect, RouteProps } from 'react-router-dom'
 
 import routingConfiguration from './routingConfiguration'
 
-interface PagesProps {}
-
-const Pages: React.FunctionComponent<PagesProps> = () => (
+const Pages: React.FC = () => (
   <Switch>
     {routingConfiguration.map(route => (
       <Route key={String(route.path)} {...route} />

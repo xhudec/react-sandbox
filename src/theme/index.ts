@@ -4,7 +4,7 @@ export interface ThemeInterface {
 }
 
 const theme: ThemeInterface = {
-  primary: '#76ff03',
+  primary: 'tomato',
   secondary: '#000000',
 }
 
