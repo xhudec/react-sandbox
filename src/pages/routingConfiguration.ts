@@ -1,7 +1,7 @@
 import { RouteProps } from 'react-router-dom'
 
 import HomePage from './home'
-import HookExamplesSwitch from './hook-examples'
+import HookExamplesPage from './hook-examples'
 import NotFoundPage from './not-found'
 
 const routingConfiguration: RouteProps[] = [
@@ -11,8 +11,9 @@ const routingConfiguration: RouteProps[] = [
     component: HomePage,
   },
   {
+    exact: true,
     path: '/hook-examples',
-    component: HookExamplesSwitch,
+    component: HookExamplesPage,
   },
   {
     exact: true,

@@ -1,15 +1,20 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import Typography from '@material-ui/core/Typography'
+import Fade from '@material-ui/core/Fade'
 
-import UseStatePage from './use-state'
-import UseFormExample from './use-form'
+import UseFormExample from './UseFormExample'
+
+import { TIMEOUT } from 'utils/constants'
 
 function HookExamplesSwitch() {
   return (
-    <Switch>
-      <Route exact path="/hook-examples/use-state" component={UseStatePage} />
-      <Route exact path="/hook-examples/use-form" component={UseFormExample} />
-    </Switch>
+    <>
+      <Fade in timeout={TIMEOUT}>
+        <Typography variant="h2">React Hooks Examples</Typography>
+      </Fade>
+
+      <UseFormExample />
+    </>
   )
 }
 

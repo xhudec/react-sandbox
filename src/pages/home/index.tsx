@@ -1,28 +1,25 @@
-import * as React from 'react'
-import { RouteComponentProps } from 'react-router-dom'
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
+import Fade from '@material-ui/core/Fade'
 
-import { PageContainer } from 'components/styled/layout'
-import { H1, H2 } from 'components/styled/headings'
-import * as S from './styled'
+import { TIMEOUT, TRANSITION_DELAY } from 'utils/constants'
 
-interface HomePageProps extends RouteComponentProps {}
+function HomePage() {
+  return (
+    <>
+      <Fade in timeout={TIMEOUT}>
+        <Typography variant="h2">Home</Typography>
+      </Fade>
 
-const HomePage: React.FunctionComponent<HomePageProps> = ({ children }) => (
-  <PageContainer>
-    <H1>React Sandbox</H1>
+      <Fade in timeout={TIMEOUT} style={{ transitionDelay: `${TRANSITION_DELAY * 2}ms` }}>
+        <Typography>Hello folks! 👋</Typography>
+      </Fade>
 
-    <S.NavigationSection>
-      <H2>Hook Examples</H2>
-      <S.NavigationList>
-        <S.NavigationItem>
-          <S.Link to="/hook-examples/use-state">React.useState</S.Link>
-        </S.NavigationItem>
-        <S.NavigationItem>
-          <S.Link to="/hook-examples/use-form">Custom.useForm</S.Link>
-        </S.NavigationItem>
-      </S.NavigationList>
-    </S.NavigationSection>
-  </PageContainer>
-)
+      <Fade in timeout={TIMEOUT} style={{ transitionDelay: `${TRANSITION_DELAY * 3}ms` }}>
+        <Typography>Welcome to my personal React Sandbox!</Typography>
+      </Fade>
+    </>
+  )
+}
 
 export default HomePage
