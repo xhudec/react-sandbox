@@ -8,8 +8,9 @@ import Link from '../Link'
 import Navigation from './Navigation'
 
 import { ReactLogo } from 'assets/images'
+import { Theme } from '@material-ui/core'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     display: 'flex',
   },
@@ -20,16 +21,16 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   content: {
-    padding: `${theme.spacing.unit * 3}px ${theme.spacing.unit * 3}px`,
+    padding: `${theme.spacing(3)}px ${theme.spacing(3)}px`,
   },
   logoContainer: {
-    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit}px`,
+    padding: `${theme.spacing(2)}px ${theme.spacing(1)}px`,
     display: 'flex',
     alignItems: 'center',
   },
   logo: {
-    height: theme.spacing.unit * 6,
-    width: theme.spacing.unit * 6,
+    height: theme.spacing(6),
+    width: theme.spacing(6),
     animation: '$custom-rotation 16s linear infinite',
   },
   logoTitle: {

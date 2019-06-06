@@ -1,10 +1,11 @@
 import React from 'react'
+import { RouteComponentProps } from 'react-router-dom';
 
 import HomePage from '..'
 
-import { renderWithRouter } from '../../../../test/helpers'
+import renderWithRouter from '../../../../test/helpers/renderWithRouter'
 
-const renderHomePage = (extraProps?: any) => {
+const renderHomePage = (propsOverrides?: RouteComponentProps) => {
   const MOCKED_LOCATION: any = {
     pathname: '/',
     search: '',
@@ -16,16 +17,16 @@ const renderHomePage = (extraProps?: any) => {
 
   const MOCKED_MATCH: any = {}
 
-  const utils = renderWithRouter(
+  const testUtils = renderWithRouter(
     <HomePage
       location={MOCKED_LOCATION}
       history={MOCKED_HISTORY}
       match={MOCKED_MATCH}
-      {...extraProps}
+      {...propsOverrides}
     />
   )
 
-  return { ...utils }
+  return { ...testUtils }
 }
 
 describe('<HomePage />', () => {

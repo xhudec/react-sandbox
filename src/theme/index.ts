@@ -16,9 +16,6 @@ const theme = createMuiTheme({
       dark: amber[700],
     },
   },
-  typography: {
-    useNextVariants: true,
-  },
   overrides: {
     MuiTypography: {
       h1: {

@@ -2,9 +2,11 @@ import React from 'react'
 import { Link as DefaultLink, LinkProps } from 'react-router-dom'
 
 import makeStyles from '@material-ui/styles/makeStyles'
+import { Theme } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme: Theme) => ({
   link: {
+    color: 'inherit',
     textDecoration: 'none',
   },
 }))

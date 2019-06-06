@@ -2,6 +2,7 @@ import React from 'react'
 import Divider from '@material-ui/core/Divider'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import Slide from '@material-ui/core/Slide'
 import IconCode from '@material-ui/icons/Code'
@@ -18,7 +19,9 @@ function NavigationList() {
       <Link to="/hook-examples">
         <Slide in direction="right" timeout={TIMEOUT}>
           <ListItem button>
-            <IconCode color="action" />
+            <ListItemIcon>
+              <IconCode color="action" />
+            </ListItemIcon>
             <ListItemText primary="Hooks" />
           </ListItem>
         </Slide>
@@ -30,7 +33,9 @@ function NavigationList() {
         style={{ transitionDelay: `${TRANSITION_DELAY}ms` }}
       >
         <ListItem disabled button>
-          <IconSchedule color="action" />
+          <ListItemIcon>
+            <IconSchedule color="action" />
+          </ListItemIcon>
           <ListItemText primary="Suspense" />
         </ListItem>
       </Slide>
@@ -42,7 +47,9 @@ function NavigationList() {
           style={{ transitionDelay: `${TRANSITION_DELAY * 2}ms` }}
         >
           <ListItem button>
-            <IconSettings color="action" />
+            <ListItemIcon>
+              <IconSettings color="action" />
+            </ListItemIcon>
             <ListItemText primary="Experimental" />
           </ListItem>
         </Slide>

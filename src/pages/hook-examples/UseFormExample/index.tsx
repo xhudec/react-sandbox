@@ -5,16 +5,17 @@ import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import Fade from '@material-ui/core/Fade'
 import makeStyles from '@material-ui/styles/makeStyles'
+import { Theme } from '@material-ui/core';
 import classNames from 'classnames'
 
 import useForm from 'hooks/useForm'
 
 import { TRANSITION_DELAY, TIMEOUT } from 'utils/constants'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme: Theme) => ({
   paper: {
-    padding: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit,
+    padding: theme.spacing(2),
+    marginBottom: theme.spacing(1),
   },
   demoContainer: {
     display: 'flex',
@@ -32,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'flex-end',
   },
   button: {
-    marginLeft: theme.spacing.unit,
+    marginLeft: theme.spacing(1),
   },
   markdown: {
     color: '#ffffff',

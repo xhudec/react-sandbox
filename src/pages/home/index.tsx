@@ -1,10 +1,11 @@
 import React from 'react'
+import { RouteComponentProps } from 'react-router-dom'
 import Typography from '@material-ui/core/Typography'
 import Fade from '@material-ui/core/Fade'
 
 import { TIMEOUT, TRANSITION_DELAY } from 'utils/constants'
 
-function HomePage() {
+function HomePage(props: RouteComponentProps) {
   return (
     <>
       <Fade in timeout={TIMEOUT}>
