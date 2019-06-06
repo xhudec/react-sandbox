@@ -17,7 +17,8 @@
     "test:watch": "react-scripts test --watch",
     "test:coverage": "react-scripts test --coverage",
     "test:static": "npm audit && npm run prettier:validate && npm run lint",
-    "dependencies:upgrade": "npm-check --update"
+    "dependencies:upgrade": "npm-check --update",
+    "cypress:open": "cypress open"
   },
   "browserslist": [
     ">0.2%",
@@ -52,6 +53,7 @@
     "@types/react-router-dom": "^4.3.3",
     "@types/styled-components": "^4.1.16",
     "@types/uuid": "^3.4.4",
+    "cypress": "^3.3.1",
     "husky": "^2.4.0",
     "is-ci-cli": "^1.1.1",
     "jest-dom": "^3.4.0",

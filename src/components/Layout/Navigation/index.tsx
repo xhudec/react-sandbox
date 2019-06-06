@@ -15,17 +15,16 @@ import { TRANSITION_DELAY, TIMEOUT } from 'utils/constants'
 
 function NavigationList() {
   return (
-    <List>
-      <Link to="/hook-examples">
-        <Slide in direction="right" timeout={TIMEOUT}>
-          <ListItem button>
-            <ListItemIcon>
-              <IconCode color="action" />
-            </ListItemIcon>
-            <ListItemText primary="Hooks" />
-          </ListItem>
-        </Slide>
-      </Link>
+    <List component="nav">
+      <Slide in direction="right" timeout={TIMEOUT}>
+        <ListItem button>
+          <ListItemIcon>
+            <IconCode color="action" />
+          </ListItemIcon>
+          <ListItemText primary="Hooks" />
+        </ListItem>
+      </Slide>
+
       <Slide
         in
         direction="right"
