@@ -9,6 +9,7 @@ import IconSchedule from '@material-ui/icons/Schedule'
 import IconSettings from '@material-ui/icons/Settings'
 
 import Link from 'components/Link'
+
 import { TRANSITION_DELAY, TIMEOUT } from 'utils/constants'
 
 function NavigationList() {

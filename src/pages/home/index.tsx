@@ -8,7 +8,7 @@ function HomePage() {
   return (
     <>
       <Fade in timeout={TIMEOUT}>
-        <Typography variant="h2">Home</Typography>
+        <Typography variant="h2">🏡Home</Typography>
       </Fade>
 
       <Fade in timeout={TIMEOUT} style={{ transitionDelay: `${TRANSITION_DELAY * 2}ms` }}>

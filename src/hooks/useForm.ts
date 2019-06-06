@@ -1,12 +1,12 @@
 import React from 'react'
 
-interface IUseFormInput<FormValues> {
-  initialValues: FormValues
-  onSubmit: (values: FormValues) => Promise<any>
+interface IUseFormInput<TFormValues> {
+  initialValues: TFormValues
+  onSubmit: (values: TFormValues) => Promise<any>
 }
 
-interface IUseForm<FormValues> {
-  values: FormValues
+interface IUseForm<TFormValues> {
+  values: TFormValues
   isSubmitting: boolean
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
   handleBlur: (event: React.FocusEvent<HTMLInputElement>) => void
@@ -14,10 +14,10 @@ interface IUseForm<FormValues> {
   handleReset: (event: React.FormEvent) => void
 }
 
-function useForm<FormValues>({
+function useForm<TFormValues>({
   initialValues,
   onSubmit,
-}: IUseFormInput<FormValues>): IUseForm<FormValues> {
+}: IUseFormInput<TFormValues>): IUseForm<TFormValues> {
   const [{ values, touched, isSubmitting }, setState] = React.useReducer(
     (currentState, newState) => ({ ...currentState, ...newState }),
     {

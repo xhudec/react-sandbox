@@ -16,6 +16,10 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing.unit * 2,
     marginBottom: theme.spacing.unit,
   },
+  demoContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
   half: {
     width: '50%',
   },
@@ -43,15 +47,16 @@ function UseFormExample() {
   const classes = useStyles()
 
   return (
-    <Fade in>
-      <Paper className={classes.paper}>
-        <Fade in timeout={TIMEOUT} style={{ transitionDelay: `${TRANSITION_DELAY}ms` }}>
-          <Typography variant="h5">useForm custom hook</Typography>
-        </Fade>
+    <>
+      <Fade in timeout={TIMEOUT} style={{ transitionDelay: `${TRANSITION_DELAY}ms` }}>
+        <Typography variant="h5">📝Form implemented by custom form handling hook</Typography>
+      </Fade>
 
-        <Fade in timeout={TIMEOUT} style={{ transitionDelay: `${TRANSITION_DELAY * 2}ms` }}>
-          <Typography variant="h6">Demo</Typography>
-        </Fade>
+      <Fade in timeout={TIMEOUT} style={{ transitionDelay: `${TRANSITION_DELAY * 2}ms` }}>
+        <Typography variant="h6">Demo</Typography>
+      </Fade>
+
+      <div className={classes.demoContainer}>
         <Fade in timeout={TIMEOUT} style={{ transitionDelay: `${TRANSITION_DELAY * 3}ms` }}>
           <Paper className={classNames(classes.paper, classes.half)}>
             <form className={classes.form} onSubmit={handleSubmit}>
@@ -109,8 +114,16 @@ function UseFormExample() {
             </form>
           </Paper>
         </Fade>
-      </Paper>
-    </Fade>
+      </div>
+
+      <div>
+        <Fade in timeout={TIMEOUT} style={{ transitionDelay: `${TRANSITION_DELAY * 7}ms` }}>
+          <Typography>
+            For details, check file <pre>/src/hooks/useForm.ts</pre>
+          </Typography>
+        </Fade>
+      </div>
+    </>
   )
 }
 
