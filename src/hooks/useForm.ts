@@ -1,24 +1,24 @@
-import { useReducer, ChangeEvent, FocusEvent, FormEvent } from 'react'
+import React from 'react'
 
-interface IUseFormInput<FormValues> {
-  initialValues: FormValues
-  onSubmit: (values: FormValues) => Promise<any>
+interface IUseFormInput<TFormValues> {
+  initialValues: TFormValues
+  onSubmit: (values: TFormValues) => Promise<any>
 }
 
-interface IUseForm<FormValues> {
-  values: FormValues
+interface IUseForm<TFormValues> {
+  values: TFormValues
   isSubmitting: boolean
-  handleChange: (event: ChangeEvent<HTMLInputElement>) => void
-  handleBlur: (event: FocusEvent<HTMLInputElement>) => void
-  handleSubmit: (event: FormEvent) => void
-  handleReset: (event: FormEvent) => void
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  handleBlur: (event: React.FocusEvent<HTMLInputElement>) => void
+  handleSubmit: (event: React.FormEvent) => void
+  handleReset: (event: React.FormEvent) => void
 }
 
-function useForm<FormValues>({
+function useForm<TFormValues>({
   initialValues,
   onSubmit,
-}: IUseFormInput<FormValues>): IUseForm<FormValues> {
-  const [{ values, touched, isSubmitting }, setState] = useReducer(
+}: IUseFormInput<TFormValues>): IUseForm<TFormValues> {
+  const [{ values, touched, isSubmitting }, setState] = React.useReducer(
     (currentState, newState) => ({ ...currentState, ...newState }),
     {
       values: initialValues,
@@ -31,7 +31,7 @@ function useForm<FormValues>({
     setState({ isSubmitting })
   }
 
-  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     setState({
       values: {
         ...values,
@@ -41,7 +41,7 @@ function useForm<FormValues>({
     })
   }
 
-  function handleBlur(event: FocusEvent<HTMLInputElement>) {
+  function handleBlur(event: React.FocusEvent<HTMLInputElement>) {
     setState({
       touched: {
         ...touched,
@@ -50,7 +50,7 @@ function useForm<FormValues>({
     })
   }
 
-  async function handleSubmit(event: FormEvent) {
+  async function handleSubmit(event: React.FormEvent) {
     event.preventDefault()
     setSubmitting(true)
 
@@ -63,7 +63,7 @@ function useForm<FormValues>({
     }
   }
 
-  function handleReset(event: FormEvent) {
+  function handleReset(event: React.FormEvent) {
     event.preventDefault()
 
     setState({

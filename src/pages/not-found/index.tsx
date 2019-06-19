@@ -1,18 +1,8 @@
-import * as React from 'react'
-import { Link, RouteComponentProps } from 'react-router-dom'
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
 
-import { H1 } from 'components/styled/headings'
-import { PrimaryButton } from 'components/styled/buttons'
-
-interface NotFoundPageProps extends RouteComponentProps {}
-
-const NotFoundPage: React.FunctionComponent<NotFoundPageProps> = () => (
-  <main>
-    <H1>404: Page Not Found</H1>
-    <Link to="/">
-      <PrimaryButton>Back to Home Page</PrimaryButton>
-    </Link>
-  </main>
-)
+function NotFoundPage() {
+  return <Typography variant="h2">404: Not Found</Typography>
+}
 
 export default NotFoundPage
