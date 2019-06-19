@@ -17,7 +17,6 @@ const navigationLinks = [
     icon: <IconSchedule color="action" />,
     label: 'Suspense',
     href: '/suspense-examples',
-    disabled: true,
   },
   {
     icon: <IconSettings color="action" />,

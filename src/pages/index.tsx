@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Switch, Route, Redirect, RouteProps } from 'react-router-dom'
+import React from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
 
 import routingConfiguration from './routingConfiguration'
 
